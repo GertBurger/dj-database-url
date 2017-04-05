@@ -103,7 +103,7 @@ def parse(url, engine=None, conn_max_age=0):
         'USER': urlparse.unquote(url.username or ''),
         'PASSWORD': urlparse.unquote(url.password or ''),
         'HOST': hostname,
-        'PORT': url.port or '',
+        'PORT': str(url.port or ''),
         'CONN_MAX_AGE': conn_max_age,
     })
 
